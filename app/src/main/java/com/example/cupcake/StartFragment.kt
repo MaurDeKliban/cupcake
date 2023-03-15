@@ -57,7 +57,7 @@ class StartFragment : Fragment() {
     fun orderCupcake(quantity: Int) {
         sharedViewModel.setQuantity(quantity)
         if (sharedViewModel.hasNoFlavorSet()){
-            sharedViewModel.setFlavor(getString(R.string.vanilla))
+            sharedViewModel.setFlavor(getString(R.string.coffee))
         }
         findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
     }
@@ -66,8 +66,4 @@ class StartFragment : Fragment() {
      * This fragment lifecycle method is called when the view hierarchy associated with the fragment
      * is being removed. As a result, clear out the binding object.
      */
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
-    }
 }
