@@ -146,7 +146,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/cancel"
-                style="?attr/materialButtonOutlinedStyle"/>
+                style="?attr/materialButtonOutlinedStyle"
+                android:onClick="@{() -> summaryFragment.cancelOrder()}"/>
 
         </LinearLayout>
     </ScrollView>
