@@ -61,7 +61,10 @@ class PickupFragment : Fragment() {
     fun goToNextScreen() {
         findNavController().navigate(R.id.action_pickupFragment_to_summaryFragment)
     }
-
+    fun cancelOrder() {
+        sharedViewModel.resetOrder()
+        findNavController().navigate(R.id.action_pickupFragment_to_startFragment)
+    }
     /**
      * This fragment lifecycle method is called when the view hierarchy associated with the fragment
      * is being removed. As a result, clear out the binding object.

@@ -62,6 +62,10 @@ class FlavorFragment : Fragment() {
     fun goToNextScreen() {
         findNavController().navigate(R.id.action_flavorFragment_to_pickupFragment4)
     }
+    fun cancelOrder() {
+        sharedViewModel.resetOrder()
+        findNavController().navigate(R.id.action_flavorFragment_to_startFragment2)
+    }
 
     /**
      * This fragment lifecycle method is called when the view hierarchy associated with the fragment
